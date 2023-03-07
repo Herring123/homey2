@@ -1,0 +1,34 @@
+<h1> <%= @homey.name %> </h1>
+
+<h4> Created by <%= @homey.user.email %> </h4>
+
+<% if @homey.user == current_user %>
+  <%= simple_form_for @homey do |f| %>
+    <span> Status <%= f.select :status, Homey.statuses.keys, {}, { onchange: 'this.form.submit();' } %> </span>
+  <% end %>
+<% else %>
+  <span> Status <%= @homey.status %> </span>
+<% end %>
+
+<% unless @homey.audits.empty? %>
+  <h3> Status Changes </h3>
+  <% @homey.audits.order(:created_at).each do |audit| %>
+    <span> Status changed from <%= Homey.statuses.key(audit.audited_changes["status"][0]) %> to <%= Homey.statuses.key(audit.audited_changes["status"][1]) %> by <%= audit.user.email %> at <%= audit.created_at.to_time %> </span>
+    <br>
+  <% end %>
+<% end %>
+
+<br>
+
+<h3>Comments</h3>
+
+<% @homey.comments.each do |comment| %>
+
+  <span><%= comment.user.email %> commented at <%= comment.created_at.to_time %></span>
+  <%= comment.content %>
+  <br>
+  <br>
+<% end %>
+
+<%= render "comments/form", comment: @comment, commentable_id: @homey.id, commentable_type: "Homey" %>
+

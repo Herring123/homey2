@@ -1,1 +1,6 @@
-<h1>hello</h1>
+<h1> List of Projects (Homeys)</h1>
+
+<% @homeys.each do |homey| %>
+  <%= link_to homey.name, homey_path(homey) %>
+  <br>
+<% end %>

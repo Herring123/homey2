@@ -1,0 +1,7 @@
+<%= simple_form_for comment do |f| %>
+  <%= f.hidden_field :commentable_id, value: commentable_id %>
+  <%= f.hidden_field :commentable_type, value: commentable_type %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+  <%= f.input :content, label: false %>
+  <%= f.submit %>
+<% end %>
