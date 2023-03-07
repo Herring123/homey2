@@ -3,7 +3,7 @@
 What questions I would have asked my colleagues:
 
 - Who can change the status of a project?
-   - Only the creator can change the status
+   - Only the creator can change the status.
 
 - Who can leave comments?
    - Everyone.
@@ -19,3 +19,8 @@ What questions I would have asked my colleagues:
 
 - Form submit over AJAX?
    - Not needed for this scenario. Possibly it's clearer that changes are being logged on page refresh.
+
+- Does a user need to be signed in to do anything?
+  - Yes.
+
+
