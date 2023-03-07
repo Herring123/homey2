@@ -1,9 +1,9 @@
 class HomeysController < ApplicationController
 
-# before_action :authenticate_user!
+  before_action :authenticate_user!
 
   def index
-
+    @homeys = Homey.all
   end
 
   def show
