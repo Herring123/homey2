@@ -8,6 +8,7 @@ class HomeysController < ApplicationController
 
   def show
     @homey = Homey.find(params[:id])
+    @comments = @homey.comments.order('created_at DESC')
     @comment = Comment.new
   end
 

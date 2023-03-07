@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+What questions I would have asked my colleagues:
 
-Things you may want to cover:
+- Who can change the status of a project?
+   - Only the creator can change the status
 
-* Ruby version
+- Who can leave comments?
+   - Everyone.
 
-* System dependencies
+- How will comments be used in the future?
+   - shared between classes, so i have created a pollymorphic association.
 
-* Configuration
+- Any more information regarding the comments and status changes to be displayed?
+   - time created and created by.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Designs?
+   - with the time available, started to implment bootstrap.

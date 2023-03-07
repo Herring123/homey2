@@ -1,6 +1,9 @@
-<h1> List of Projects (Homeys)</h1>
+<div class="text-center">
+  <h1> List of Projects (Homeys)</h1>
+  <p>Please click on a project below</p>
 
-<% @homeys.each do |homey| %>
-  <%= link_to homey.name, homey_path(homey) %>
-  <br>
-<% end %>
+  <% @homeys.each do |homey| %>
+    <%= link_to homey.name, homey_path(homey), class: "btn btn-primary m-1" %>
+    <br>
+  <% end %>
+</div>
