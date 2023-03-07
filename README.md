@@ -18,4 +18,4 @@ What questions I would have asked my colleagues:
    - with the time available, started to implement basic bootstrap.
 
 - Form submit over AJAX?
-- Not needed for this scenario. Possibly it's clearer that changes are being logged on page refresh.
+   - Not needed for this scenario. Possibly it's clearer that changes are being logged on page refresh.
