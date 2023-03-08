@@ -13,7 +13,7 @@
           <ul class="list-unstyled mt-3 mb-4">
             <li>Creator: <%= homey.user.email %></li>
             <li>Status: <%= homey.status %></li>
-            <% if homey.audits.present %>
+            <% if homey.audits.present? %>
               <li>Status last updated: <%= time_ago_in_words(homey.audits.last.created_at) %> ago</li>
             <% end %>
           </ul>
