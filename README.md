@@ -11,6 +11,9 @@ What questions I would have asked my colleagues:
 - How will comments be used in the future?
    - Shared between classes, so i have created a pollymorphic association.
 
+- Should the status and comment history be displayed together or separately?
+   - Separately to be more clear.
+
 - Any more information regarding the comments and status changes that could be displayed?
    - Time created and created by.
 
@@ -22,5 +25,3 @@ What questions I would have asked my colleagues:
 
 - Does a user need to be signed in to do anything?
   - Yes.
-
-
