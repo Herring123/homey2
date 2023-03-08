@@ -2,8 +2,22 @@
   <h1> List of Projects (Homeys)</h1>
   <p>Please click on a project below</p>
 
-  <% @homeys.each do |homey| %>
-    <%= link_to homey.name, homey_path(homey), class: "btn btn-primary m-1" %>
-    <br>
-  <% end %>
+<div class="container">
+  <div class="card-deck mb-3 text-center">
+    <% @homeys.sort.each do |homey| %>
+      <div class="card mb-4 box-shadow">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal"> <%= homey.name %> </h4>
+        </div>
+        <div class="card-body">
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>Creator: <%= homey.user.email %></li>
+            <li>Status: <%= homey.status %></li>
+            <li>Status last updated: <%= time_ago_in_words(homey.audits.last.created_at) %> ago</li>
+          </ul>
+          <%= link_to "Visit project", homey_path(homey), class: "btn btn-lg btn-block btn-outline-primary" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>

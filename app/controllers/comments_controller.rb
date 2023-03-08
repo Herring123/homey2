@@ -4,11 +4,9 @@ class CommentsController < ApplicationController
 
   def create
     comment = Comment.new(comment_params)
-    if comment.save
-      flash[:notice] = "Successfully Updated"
-    else
-      flash[:alert] = "Failed to update"
-    end
+
+    flash[:alert] = "Failed to update" unless comment.save
+
     redirect_back(fallback_location: root_path)
   end
 
