@@ -25,3 +25,12 @@ What questions I would have asked my colleagues:
 
 - Does a user need to be signed in to do anything?
   - Yes.
+
+
+Creator login:
+Email: creator@user.com
+Password: 12345678
+
+Viewer login:
+Email: viewer@user.com
+Password: 12345678
