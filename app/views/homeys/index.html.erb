@@ -4,7 +4,7 @@
 
 <div class="container">
   <div class="card-deck mb-3 text-center">
-    <% @homeys.sort.each do |homey| %>
+    <% @homeys.order(:created_at).each do |homey| %>
       <div class="card mb-4 box-shadow">
         <div class="card-header">
           <h4 class="my-0 font-weight-normal"> <%= homey.name %> </h4>
